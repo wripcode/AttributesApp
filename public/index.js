@@ -11,44 +11,35 @@ document.addEventListener('DOMContentLoaded', () => {
     const addButton = document.getElementById('attr-add');
     if (addButton) {
         addButton.addEventListener('click', () => __awaiter(this, void 0, void 0, function* () {
-            console.log('Add Attribute button clicked');
             const element = yield webflow.getSelectedElement();
             if (element) {
-                console.log('Selected element:', element);
-                // Inputs
                 const attributeNameInput = document.getElementById('Name');
                 const attributeValueInput = document.getElementById('Value');
                 if (element.customAttributes) {
-                    console.log('Custom attributes present');
-                    // Get attribute name and value from inputs
                     const attributeName = attributeNameInput.value.trim();
                     const attributeValue = attributeValueInput.value.trim();
-                    // Check if inputs are not empty
                     if (attributeName !== '' && attributeValue !== '') {
-                        console.log('Attribute Name:', attributeName);
-                        console.log('Attribute Value:', attributeValue);
-                        // Add the new attribute
                         element.setCustomAttribute(attributeName, attributeValue);
-                        // Save changes to the element
                         yield element.save();
-                        console.log('Element saved');
-                        // Notify success
                         webflow.notify({ type: 'Success', message: 'Attribute added successfully!' });
+                        // Clear input values
+                        attributeNameInput.value = '';
+                        attributeValueInput.value = '';
                     }
                     else {
-                        console.log('Invalid input. Attribute Name and Value cannot be empty.');
+                        webflow.notify({ type: 'Error', message: 'Invalid input. Attribute Name and Value cannot be empty.' });
                     }
                 }
                 else {
-                    console.log('No custom attributes available');
+                    webflow.notify({ type: 'Error', message: 'No custom attributes available' });
                 }
             }
             else {
-                console.log('No element selected');
+                webflow.notify({ type: 'Error', message: 'No element selected' });
             }
         }));
     }
     else {
-        console.error('Add Attribute button not found.');
+        webflow.notify({ type: 'Error', message: 'Add Attribute button not found' });
     }
 });
