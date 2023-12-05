@@ -1,0 +1,397 @@
+<link href="styles.css" rel="stylesheet" />
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+root {
+  --white: white;
+  --bg5: #444;
+  --bginverse: #ebebeb;
+  --black: black;
+  --bg1: #1e1e1e;
+  --bg2: #2e2e2e;
+  --bg3: #383838;
+  --bg4: #373737;
+  --bginactive: #2e2e2e;
+  --bginput: rgba(0, 0, 0, .15);
+  /* Webflow colors */
+--background1: #1E1E1E;
+--background2: #2E2E2E;
+--background3: #383838;
+--background4: #373737;
+--background5: #444444;
+--backgroundInactive: #2E2E2E;
+--backgroundInverse: #EBEBEB;
+--backgroundInput: rgba(0, 0, 0, 0.15);
+
+--actionPrimaryBackground: #006ACC;
+--actionPrimaryBackgroundHover: #187CD9;
+--actionSecondaryBackground: linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.10) 100%);
+--actionSecondaryBackgroundHover: linear-gradient(180deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0.16) 100%);
+--actionPrimaryText: #FFFFFF;
+--actionPrimaryTextHover: #FFFFFF;
+--actionSecondaryText: #E0E0E0;
+--actionSecondaryTextHover: #E0E0E0;
+
+--border1: rgba(255, 255, 255, 0.13);
+--border2: rgba(255, 255, 255, 0.14);
+--border3: rgba(255, 255, 255, 0.19);
+
+--text1: #F5F5F5;
+--text2: #BDBDBD;
+--text3: #A3A3A3;
+--textInactive: #757575;
+--textInverse: #1E1E1E;
+
+--blueText: #8AC2FF;
+--blueIcon: #8AC2FF;
+--blueBorder: #007DF0;
+
+--greenBackground: #007A41;
+--greenBackgroundHover: #0D8A4F;
+--greenText: #63D489;
+--greenIcon: #63D489;
+--greenBorder: #259D4D;
+--yellowBackground: #946B00;
+
+--yellowBackgroundHover: #AF7F00;
+--yellowText: #F3C831;
+--yellowIcon: #F3C831;
+--yellowBorder: #D7A220;
+
+--redBackground: #CF313B;
+--redBackgroundHover: #CB3535;
+--redText: #FF8A8A;
+--redIcon: #FF8A8A;
+--redBorder: #E42F3A;
+
+--orangeBackground: #BF4704;
+--orangeBackgroundHover: #DC95616;
+--orangeText: #EBA267;
+--orangeIcon: #EBA267;
+--orangeBorder: #DF640C;
+
+--purpleBackground: #734CE0;
+--purpleBackgroundHover: #815BEB;
+--purpleText: #B89EFF;
+--purpleIcon: #B89EFF;
+--purpleBorder: #875FFD;
+
+/* Box shadows for buttons and inputs */
+--boxShadows-action-colored: 0px 0.5px 1px 0px rgba(0, 0, 0, 0.8),0px 0.5px 0.5px 0px rgba(255, 255, 255, 0.20) inset;
+--boxShadows-action-secondary: 0px 0.5px 1px rgba(0, 0, 0, 0.8),inset 0px 0.5px 0.5px rgba(255, 255, 255, 0.12);
+--boxShadows-input-inner: 0px 1px 1px -1px rgba(0, 0, 0, 0.13) inset,0px 3px 3px -3px rgba(0, 0, 0, 0.17) inset,0px 4px 4px -4px rgba(0, 0, 0, 0.17) inset,0px 8px 8px -8px rgba(0, 0, 0, 0.17) inset,0px 12px 12px -12px rgba(0, 0, 0, 0.13) inset,0px 16px 16px -16px rgba(0, 0, 0, 0.13) inset;
+
+--boxShadows-menu: 0px 0.5px 0.5px 0px rgba(255, 255, 255, 0.12) inset, 0px 12px 24px 8px rgba(0, 0, 0, 0.04), 0px 8px 16px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px 2px rgba(0, 0, 0, 0.04), 0px 2px 6px 0px rgba(0, 0, 0, 0.04), 0px 0px 1px 0px rgba(0, 0, 0, 0.25);
+
+--input-inner-shadow: 0px 1px 1px -1px rgba(0, 0, 0, 0.13) inset, 0px 3px 3px -3px rgba(0, 0, 0, 0.17) inset, 0px 4px 4px -4px rgba(0, 0, 0, 0.17) inset, 0px 8px 8px -8px rgba(0, 0, 0, 0.17) inset, 0px 12px 12px -12px rgba(0, 0, 0, 0.13) inset, 0px 16px 16px -16px rgba(0, 0, 0, 0.13) inset;
+
+--menu-shadow: 0px 12px 24px 8px rgba(0, 0, 0, 0.08), 0px 8px 16px 4px rgba(0, 0, 0, 0.08), 0px 4px 8px 2px rgba(0, 0, 0, 0.08), 0px 2px 6px 0px rgba(0, 0, 0, 0.08), 0px -0.5px 0.5px 0px rgba(0, 0, 0, 0.12) inset, 0px 0.5px 0.5px 0px rgba(255, 255, 255, 0.12) inset;
+
+/* TYPOGRAPHY */
+--font-stack: 'Inter', sans-serif;
+--font-size-small: 11.5px;
+--font-size-small-letter-spacing: -0.115px;
+--font-size-large: 12.5px;
+--font-weight-normal: 400;
+--font-weight-medium: 600;
+--border-radius: 4px;
+}
+
+body {
+  margin: 0;
+  background: var(--blueText);
+  color: white !important;
+  font-family: 'Montserrat', sans-serif;
+}
+.app_wrapper {
+  color:white;
+  display: flex;
+  padding-top: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 2rem;
+  flex-direction: column;
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+}
+.input-block-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+}
+.flex-horizontal {
+  display: flex;
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+}
+
+.flex-horizontal.flex-gap-medium {
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+}
+.input_field {
+  height: 25px;
+  color: var(--white);
+  padding-left: 10px;
+  margin-bottom: 0px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #444;
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-right-color: #444;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #444;
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-left-color: #444;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: hsla(0, 0.00%, 100.00%, 0.00);
+}
+.button {
+  min-height: 30px;
+  display: flex;
+  padding-right: 25px;
+  padding-left: 25px;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #006acc;
+  transition-property: background-color, opacity, color;
+  transition-duration: 400ms, 400ms, 400ms;
+  transition-timing-function: ease, ease, ease;
+  color: white;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.button:medium {
+  justify-content: center;
+}
+
+.button:hover {
+  background-color: #187cd9;
+  color: white;
+}
+
+.button:active {
+  background-color: #43464d;
+}
+.att-list-wrap {
+  display: flex;
+  flex-direction: column;
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: hsla(0, 0.00%, 25.33%, 1.00);
+}
+.attr-tab {
+  display: flex;
+  width: 100%;
+}
+.attr-tab-menu {
+  display: flex;
+  flex-direction: column;
+  grid-column-gap: 0.5rem;
+  grid-row-gap: 0.5rem;
+}
+.attr-tab-header {
+  padding-top: 0.5rem;
+  padding-right: 2rem;
+  padding-bottom: 0.5rem;
+  padding-left: 2rem;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #444;
+  color: var(--white);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.attr-tab-header:current {
+  background-color: #ebebeb;
+  color: var(--black);
+}
+
+.attr-tab-header:hover {
+  color: var(--bginverse);
+}
+.attr-tab-content {
+  width: 100%;
+  height: 100%;
+  padding-right: 1rem;
+  padding-left: 3rem;
+}
+.attr-tab-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+}
+.attr-tab-cheader {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+}
+
+.attr-list-wrap {
+  display: grid;
+  width: 100%;
+  flex-direction: column;
+  grid-auto-columns: 1fr;
+  grid-column-gap: 3rem;
+  grid-row-gap: 3rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+}
+
+.input_field-wrap.attr {
+  display: flex;
+  margin-top: 1rem;
+  flex-direction: column;
+  grid-column-gap: 0.7rem;
+  grid-row-gap: 0.7rem;
+}
+
+.checkbox-label {
+  margin-bottom: 0px;
+}
+.w-checkbox {
+  margin-bottom: 5px;
+  padding-left: 20px;
+  display: block;
+}
+
+.w-checkbox:before {
+  content: " ";
+  grid-area: 1 / 1 / 2 / 2;
+  display: table;
+}
+
+.w-checkbox:after {
+  content: " ";
+  clear: both;
+  grid-area: 1 / 1 / 2 / 2;
+  display: table;
+}
+
+.w-checkbox-input {
+  float: left;
+  margin: 4px 0 0 -20px;
+  line-height: normal;
+}
+
+.w-checkbox-input--inputType-custom {
+  width: 12px;
+  height: 12px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+}
+
+.w-checkbox-input--inputType-custom.w--redirected-checked {
+  background-color: #3898ec;
+  background-image: url('https://d3e54v103j8qbb.cloudfront.net/static/custom-checkbox-checkmark.589d534424.svg');
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-color: #3898ec;
+}
+
+.w-checkbox-input--inputType-custom.w--redirected-focus {
+  box-shadow: 0 0 3px 1px #3898ec;
+}
+.input_field-wrap {
+  display: flex;
+  flex-direction: column;
+  grid-column-gap: 0.5rem;
+  grid-row-gap: 0.5rem;
+}
+</style>
+
+
+
+<div class="app_wrapper">
+  <h1>Attributes app</h1>
+  <div class="input-wrapper">
+    <div class="input-block-wrap">
+          <div class="flex-horizontal flex-gap-medium">
+            <div class="input_field-wrap"><label for="Name" class="input-label">Name</label>
+              <input type="text" class="input_field w-input" maxlength="256" name="Name" data-name="Name" placeholder="" id="Name">
+            </div>
+            <div class="input_field-wrap"><label for="Value" class="input-label">Value</label>
+              <input type="text" class="input_field w-input" maxlength="256" name="Value" data-name="Value" placeholder="" id="Value">
+            </div>
+          </div>
+          <a id="attr-add" href="#" class="button w-button">+ADD Attribute</a>
+        </div>
+  </div>
+  <div class="att-list-wrap">
+    <h3>Finsweet attributes</h3>
+    <div data-current="cms-filter" data-easing="ease" data-duration-in="300" data-duration-out="100" class="attr-tab w-tabs">
+      <div class="attr-tab-menu w-tab-menu">
+        <a data-w-tab="cms-filter" class="attr-tab-header w-inline-block w-tab-link w--current">
+          <div>CMS Filter</div>
+        </a>
+        <a data-w-tab="Tab 2" class="attr-tab-header w-inline-block w-tab-link">
+          <div>Tab 2</div>
+        </a>
+        <a data-w-tab="Tab 3" class="attr-tab-header w-inline-block w-tab-link">
+          <div>Tab 3</div>
+        </a>
+      </div>
+      <div class="attr-tab-cwrap w-tab-content">
+        <div data-w-tab="cms-filter" class="attr-tab-content w-tab-pane w--tab-active">
+          <div class="attr-tab-wrap">
+            <div class="attr-tab-cheader">
+              <a href="#" class="button w-button">+Add selected attributes</a>
+              <a href="#" class="button w-button">Copy Script</a>
+            </div>
+           <div class="attr-list-wrap">
+                  <div class="input_field-wrap attr">
+                    <div class="attr-sub-heading">Add this to List</div><label class="w-checkbox checkbox-field">
+                      <div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox-box w--redirected-checked"></div><input type="checkbox" id="List" name="List" data-name="List" checked="" style="opacity:0;position:absolute;z-index:-1"><span class="checkbox-label w-form-label" for="List">List</span>
+                    </label><label class="w-checkbox checkbox-field">
+                      <div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox-box"></div><input type="checkbox" id="Easing" name="Easing" data-name="Easing" style="opacity:0;position:absolute;z-index:-1"><span class="checkbox-label w-form-label" for="Easing">Easing</span>
+                    </label><label class="w-checkbox checkbox-field">
+                      <div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox-box"></div><input type="checkbox" id="Allow-submit" name="Allow-submit" data-name="Allow submit" style="opacity:0;position:absolute;z-index:-1"><span class="checkbox-label w-form-label" for="Allow-submit">Allow submit (Optional)</span>
+                    </label><label class="w-checkbox checkbox-field">
+                      <div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox-box"></div><input type="checkbox" id="Active-class" name="Active-class" data-name="Active class" style="opacity:0;position:absolute;z-index:-1"><span class="checkbox-label w-form-label" for="Active-class">Active class (Optional)</span>
+                    </label>
+                  </div>
+                  <div class="input_field-wrap attr">
+                    <div class="attr-sub-heading">Must have</div><label class="w-checkbox checkbox-field">
+                      <div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox-box"></div><input type="checkbox" id="Filters-2" name="Filters-2" data-name="Filters 2" style="opacity:0;position:absolute;z-index:-1"><span class="checkbox-label w-form-label" for="Filters-2">Filters (Form)</span>
+                    </label><label class="w-checkbox checkbox-field">
+                      <div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox-box"></div><input type="checkbox" id="Identifier" name="Identifier" data-name="Identifier" style="opacity:0;position:absolute;z-index:-1"><span class="checkbox-label w-form-label" for="Identifier">Identifier</span>
+                    </label><input type="text" class="input_field w-input" maxlength="256" name="Identifier" data-name="Identifier" placeholder="type identifier..." id="Identifier">
+                    <a href="#" class="button w-button">+Add Identifier</a>
+                  </div>
+                </div>
+          </div>
+        </div>
+        <div data-w-tab="Tab 2" class="attr-tab-content w-tab-pane"></div>
+        <div data-w-tab="Tab 3" class="attr-tab-content w-tab-pane"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="index.js"></script>
