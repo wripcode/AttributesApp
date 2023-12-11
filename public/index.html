@@ -2,7 +2,7 @@
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-root {
+:root {
   --white: white;
   --bg5: #444;
   --bginverse: #ebebeb;
@@ -123,8 +123,8 @@ body {
 }
 .flex-horizontal {
   display: flex;
-  grid-column-gap: 1rem;
-  grid-row-gap: 1rem;
+  grid-column-gap: 0.5rem;
+  grid-row-gap: 0.5rem;
 }
 
 .flex-horizontal.flex-gap-medium {
@@ -324,6 +324,37 @@ body {
   grid-column-gap: 0.5rem;
   grid-row-gap: 0.5rem;
 }
+.flex-vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.flex-vertical.flex-gap-medium {
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+}
+.attr-listing {
+  display: flex;
+  overflow: auto;
+  width: 100%;
+  max-height: 20vh;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  flex-direction: column;
+  grid-column-gap: 0rem;
+  grid-row-gap: 0rem;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #414141;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #414141;
+}
+.attr-list-item {
+  font-size: 14px;
+}
+
 </style>
 
 
@@ -331,7 +362,8 @@ body {
 <div class="app_wrapper">
   <h1>Attributes app</h1>
   <div class="input-wrapper">
-    <div class="input-block-wrap">
+    <div class="flex-vertical flex-gap-medium">
+      <div class="input-block-wrap">
           <div class="flex-horizontal flex-gap-medium">
             <div class="input_field-wrap"><label for="Name" class="input-label">Name</label>
               <input type="text" class="input_field w-input" maxlength="256" name="Name" data-name="Name" placeholder="" id="Name">
@@ -341,11 +373,18 @@ body {
             </div>
           </div>
           <a id="attr-add" href="#" class="button w-button">+ADD Attribute</a>
+      </div>
+      <div class="attr-listing">
+        <button id="get-el-btn" class="button w-button" style="display: none;">Get Element</button>
+        <div class="flex-horizontal">
+          <p class="attr-list-item attr-name">wio</p><p class="attr-list-item attr-value">text1</p>
         </div>
+      </div>
+  </div>
   </div>
   <div class="att-list-wrap">
     <h3>Finsweet attributes</h3>
-    <div data-current="cms-filter" data-easing="ease" data-duration-in="300" data-duration-out="100" class="attr-tab w-tabs">
+    <div data-easing="ease" data-duration-in="300" data-duration-out="100" class="attr-tab w-tabs">
       <div class="attr-tab-menu w-tab-menu">
         <a data-w-tab="cms-filter" class="attr-tab-header w-inline-block w-tab-link w--current">
           <div>CMS Filter</div>
