@@ -9,9 +9,22 @@ Fill with Dummy data:
 
 ## Developing
 
+Before start developing install webflow cli to project:
+```
+$ npm install -g @webflow/webflow-cli
+```
+```
+$ npm install @webflow/designer-extension-typings
+```
+more info here: https://docs.developers.webflow.com/reference/webflow-cli-1
+Webflow api's and docs: https://docs.developers.webflow.com/reference/the-domelement-object
+
+## Run
+
 ```
 $ npm run dev
 ```
+
 
 The above command does a few things:
 * Installs dependencies
