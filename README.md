@@ -1,6 +1,11 @@
-# testApp
+# For webflow
 
-This is an example Webflow Designer extension written in TypeScript to get you started. Check out our [documentation](https://docs.developers.webflow.com/v2.0.0/docs/create-a-designer-extensions) for in-depth information about Designer Extension features and API.
+For test go to webflow acc. > Apps & Integrations > + Create new app Fill with Dummy data:
+
+Name, Description, App homepage url: https://google.com > Continue
+Switch on Designer extension (Designer API) > Create App
+App will be listed under App development
+Click on install and select webflow project where you want to test.
 
 ## Developing
 
