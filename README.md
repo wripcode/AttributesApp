@@ -1,11 +1,11 @@
 # For webflow
 
-For test go to webflow acc. > Apps & Integrations > + Create new app Fill with Dummy data:
-
-Name, Description, App homepage url: https://google.com > Continue
-Switch on Designer extension (Designer API) > Create App
-App will be listed under App development
-Click on install and select webflow project where you want to test.
+For test go to webflow acc. > Apps & Integrations > + Create new app
+Fill with Dummy data:
+* Name, Description, App homepage url: https://gogle.com > Continue
+* Switch on Designer extension (Designer API) > Create App
+* App will be listed under App development
+* Click on install and select webflow project where you want to test.
 
 ## Developing
 
