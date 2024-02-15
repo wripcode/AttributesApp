@@ -1,5 +1,5 @@
 {
-  "name": "testapp",
+  "name": "attriflow",
   "version": "1.0.0",
   "private": true,
   "main": "index.js",
@@ -8,8 +8,9 @@
     "dev": "npm install && concurrently -r \"webflow extension serve\" \"tsc -p tsconfig.json --watch --preserveWatchOutput\""
   },
   "devDependencies": {
-    "@webflow/designer-extension-typings": "*",
+    "@webflow/designer-extension-typings": "^0.1.12",
     "concurrently": "*",
-    "typescript": "*"
+    "typescript": "*",
+    "webflow-api": "^1.3.1"
   }
 }
