@@ -11,10 +11,10 @@ Fill with Dummy data:
 
 Before start developing install webflow cli to project:
 ```
-$ npm install -g @webflow/webflow-cli
+npm install -g @webflow/webflow-cli
 ```
 ```
-$ npm install @webflow/designer-extension-typings
+npm install @webflow/designer-extension-typings
 ```
 more info here: https://docs.developers.webflow.com/reference/webflow-cli-1
 Webflow api's and docs: https://docs.developers.webflow.com/reference/the-domelement-object
@@ -22,7 +22,7 @@ Webflow api's and docs: https://docs.developers.webflow.com/reference/the-domele
 ## Run
 
 ```
-$ npm run dev
+npm run dev
 ```
 
 
